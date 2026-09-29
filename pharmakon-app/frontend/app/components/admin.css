@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    --admin-ink: #17343b;
+    --admin-muted: #708387;
+    --admin-green: #087c70;
+    --admin-green-dark: #07574f;
+    --admin-pale: #edf5f1;
+    --admin-line: #dce6e2;
+    --admin-white: #fff;
+    --admin-orange: #dd7256;
+    --admin-font: 'DM Sans', Arial, sans-serif;
+    --admin-display: 'Manrope', 'DM Sans', Arial, sans-serif
+}
+
+body:has(.admin-shell),
+body:has(.login-shell) {
+    margin: 0;
+    background: #f5f8f6;
+    color: var(--admin-ink);
+    font-family: var(--admin-font);
+
+    @media(max-width:1050px) {
+        line-height: 1.5
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font: inherit
+    }
+
+    button {
+        cursor: pointer
+    }
+
+    .admin-loading {
+        min-height: 100vh;
+        display: grid;
+
+        @media(max-width:650px) {
+            color: var(--admin-muted);
+            font-size: 13px
+        }
+
+        .login-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: minmax(340px, 520px) minmax(0, 1fr);
+            background: #f5f8f6
+        }
+
+        .login-panel {
+            width: min(390px, calc(100% - 48px));
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px
+        }
+
+        .admin-brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font: 800 13px/1.2 var(--admin-display);
+            letter-spacing: .06em
+        }
+
+        .admin-brand small {
+            display: block;
+            margin-top: 5px;
+            color: var(--admin-green);
+            font: 700 9px var(--admin-font);
+            letter-spacing: .13em
+        }
+
+        .admin-brand-mark {
+            width: 39px;
+            height: 39px;
+            display: grid;
+            place-items: center;
+            background: var(--admin-green);
+            color: white;
+            border-radius: 10px 10px 10px 2px;
+            font: 800 22px var(--admin-display)
+        }
+
+        .login-panel>.admin-brand {
+            margin-bottom: 43px
+        }
+
+        .admin-kicker,
+        .sidebar-label {
+            color: var(--admin-green);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .13em;
+            text-transform: uppercase
+        }
+
+        .login-panel h1 {
+            margin: 0 0 8px;
+            font: 700 33px/1.18 var(--admin-display);
+            letter-spacing: 0
+        }
+
+        .login-panel>label,
+        .editor-panel>label,
+        .admin-form-row>label {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            color: #476168;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .login-panel input,
+        .editor-panel input,
+        .editor-panel select,
+        .editor-panel textarea {
+            width: 100%;
+            min-height: 43px;
+            padding: 10px 11px;
+            border: 1px solid var(--admin-line);
+            border-radius: 2px;
+            outline: 0;
+            background: white;
+            color: var(--admin-ink);
+            font-size: 12px
+        }
+
+        .login-panel input:focus,
+        .editor-panel input:focus,
+        .editor-panel select:focus,
+        .editor-panel textarea:focus {
+            border-color: var(--admin-green)
+        }
+
+        .admin-primary {
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            border: 0;
+            border-radius: 2px;
+            background: var(--admin-green-dark);
+            color: white;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .admin-primary:hover {
+            background: #064b45
+        }
+
+        .admin-primary:disabled {
+            opacity: .65;
+            cursor: wait
+        }
+
+        .admin-primary span {
+            color: #d2e879
+        }
+
+        .login-footnote {
+            margin: 10px 0 0;
+            color: var(--admin-muted);
+            font-size: 10px
+        }
+
+        .login-aside {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #16464a;
+            color: white
+        }
+
+        .login-aside:before,
+        .login-aside:after {
+            content: "";
+            position: absolute;
+            width: 530px;
+            height: 530px;
+            border: 1px solid rgba(214, 235, 222, .19);
+            border-radius: 50%
+        }
+
+        .login-aside:after {
+            width: 390px;
+            height: 390px
+        }
+
+        .login-aside p {
+            z-index: 1;
+            font: 600 48px/1.14 var(--admin-display)
+        }
+
+        .login-aside em {
+            color: #d2e879;
+            font: italic 400 46px Georgia, serif
+        }
+
+        .aside-index {
+            position: absolute;
+            top: 35px;
+            right: 42px;
+            color: #b8d2c8;
+            font-size: 9px;
+            letter-spacing: .14em
+        }
+
+        .aside-rule {
+            position: absolute;
+            bottom: 42px;
+            left: 42px;
+            width: 52px;
+            height: 3px;
+            background: #d2e879
+        }
+
+        .admin-notice {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 12px;
+            border: 1px solid #cbded4;
+            background: #f0f8f2;
+            color: #315a48;
+            font-size: 11px
+        }
+
+        .admin-notice.error {
+            border-color: #efcec6;
+            background: #fff6f2;
+            color: #a13e30
+        }
+
+        .admin-notice button {
+            border: 0;
+            background: none;
+            color: inherit;
+            font-size: 17px
+        }
+
+        .admin-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 236px minmax(0, 1fr)
+        }
+
+        .admin-sidebar {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 17px;
+            background: #153b40;
+            color: #e2efeb
+        }
+
+        .admin-sidebar .admin-brand {
+            padding: 0 7px 36px
+        }
+
+        .admin-sidebar .admin-brand small {
+            color: #aaccc0
+        }
+
+        .admin-sidebar .admin-brand-mark {
+            background: #d2e879;
+            color: #153b40
+        }
+
+        .sidebar-label {
+            padding: 0 9px 10px;
+            color: #8fb5a9;
+            font-size: 8px
+        }
+
+        .sidebar-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 9px;
+            border: 0;
+            border-radius: 2px;
+            background: transparent;
+            color: #d7e6e2;
+            text-align: left;
+            font-size: 11px
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: #24565a;
+            color: white
+        }
+
+        .sidebar-icon {
+            width: 17px;
+            color: #d2e879;
+            font-size: 14px
+        }
+
+        .sidebar-count {
+            min-width: 20px;
+            margin-left: auto;
+            padding: 2px 5px;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, .12);
+            text-align: center;
+            font-size: 9px
+        }
+
+        .sidebar-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: auto;
+            padding: 13px 8px 0;
+            border-top: 1px solid rgba(255, 255, 255, .14)
+        }
+
+        .sidebar-bottom a,
+        .sidebar-bottom button {
+            display: flex;
+            justify-content: space-between;
+            border: 0;
+            background: none;
+            color: #d7e6e2;
+            text-align: left;
+            font-size: 10px
+        }
+
+        .sidebar-bottom a:hover,
+        .sidebar-bottom button:hover {
+            color: #d2e879
+        }
+
+        .admin-main {
+            min-width: 0;
+            padding: 27px clamp(20px, 3.3vw, 48px) 35px
+        }
+
+        .admin-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 23px
+        }
+
+        .admin-topbar h1 {
+            margin: 4px 0 0;
+            font: 700 25px var(--admin-display);
+            letter-spacing: 0
+        }
+
+        .refresh-button {
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--admin-line);
+            border-radius: 50%;
+            background: #fff;
+            color: var(--admin-green);
+            font-size: 18px
+        }
+
+        .admin-content-grid {
+            display: grid;
+            grid-template-columns: minmax(260px, 345px) minmax(0, 1fr);
+            align-items: start;
+            gap: 18px
+        }
+
+        .editor-panel,
+        .catalogue-panel,
+        .enquiries-panel {
+            min-width: 0;
+            border: 1px solid var(--admin-line);
+            background: #fff
+        }
+
+        .editor-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            padding: 18px
+        }
+
+        .panel-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 13px;
+            border-bottom: 1px solid var(--admin-line)
+        }
+
+        .panel-heading h2 {
+            margin: 4px 0 0;
+            font: 700 16px var(--admin-display);
+            letter-spacing: 0
+        }
+
+        .quiet-button {
+            padding: 6px 8px;
+            border: 1px solid var(--admin-line);
+            border-radius: 2px;
+            background: #fff;
+            color: var(--admin-green-dark);
+            font-size: 9px;
+            font-weight: 700
+        }
+
+        .quiet-button:hover {
+            border-color: var(--admin-green)
+        }
+
+        .admin-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px
+        }
+
+        .editor-panel textarea {
+            resize: vertical
+        }
+
+        .catalogue-panel,
+        .enquiries-panel {
+            padding: 17px
+        }
+
+        .result-count {
+            display: inline-grid;
+            min-width: 21px;
+            height: 21px;
+            place-items: center;
+            margin-left: 5px;
+            padding: 0 5px;
+            border-radius: 12px;
+            background: var(--admin-pale);
+            color: var(--admin-green);
+            font: 700 10px var(--admin-font)
+        }
+
+        .product-table-head,
+        .product-row {
+            display: grid;
+            grid-template-columns: minmax(140px, 1fr) 85px 100px;
+            align-items: center;
+            gap: 10px
+        }
+
+        .product-table-head {
+            padding: 11px 0 8px;
+            color: #819394;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: .08em
+        }
+
+        .product-row {
+            min-height: 54px;
+            border-top: 1px solid #edf1ef
+        }
+
+        .product-row>div:first-child {
+            min-width: 0;
+            display: flex;
+            flex-direction: column
+        }
+
+        .product-row strong {
+            overflow: hidden;
+            color: #29444a;
+            font-size: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .product-row small {
+            overflow: hidden;
+            color: #839394;
+            font-size: 9px;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .area-tag {
+            width: max-content;
+            max-width: 100%;
+            padding: 4px 6px;
+            background: #edf5f1;
+            color: #427064;
+            font-size: 8px
+        }
+
+        .row-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px
+        }
+
+        .row-actions button {
+            padding: 4px 0;
+            border: 0;
+            background: none;
+            color: var(--admin-green-dark);
+            font-size: 9px;
+            font-weight: 700
+        }
+
+        .row-actions .delete-action {
+            color: #b44e3b
+        }
+
+        .product-table {
+            max-height: calc(100vh - 245px);
+            overflow: auto
+        }
+
+        .enquiries-panel {
+            min-height: 390px
+        }
+
+        .enquiry-row {
+            display: grid;
+            grid-template-columns: 175px minmax(160px, 1fr) 100px;
+            gap: 16px;
+            padding: 15px 0;
+            border-top: 1px solid #edf1ef
+        }
+
+        .enquiry-person {
+            display: flex;
+            flex-direction: column;
+            gap: 4px
+        }
+
+        .enquiry-person strong {
+            font-size: 11px
+        }
+
+        .enquiry-person a,
+        .enquiry-copy small {
+            color: var(--admin-muted);
+            font-size: 9px
+        }
+
+        .enquiry-copy p {
+            margin: 6px 0;
+            color: #415c60;
+            font-size: 11px;
+            white-space: pre-wrap
+        }
+
+        .enquiry-row select {
+            align-self: start;
+            width: 100%;
+            min-height: 32px;
+            padding: 5px;
+            border: 1px solid var(--admin-line);
+            background: white;
+            color: var(--admin-ink);
+            font-size: 9px
+        }
+
+        .admin-empty {
+            padding: 70px 15px;
+            text-align: center;
+            color: var(--admin-muted)
+        }
+
+        .admin-empty>span {
+            color: var(--admin-green);
+            font-size: 26px
+        }
+
+        .admin-empty h3 {
+            margin: 8px 0 4px;
+            color: var(--admin-ink);
+            font: 700 16px var(--admin-display)
+        }
+
+        .admin-empty p,
+        .admin-footer-note {
+            font-size: 10px
+        }
+
+        .admin-footer-note {
+            margin: 15px 0 0;
+            color: #879696
+        }
+
+        .admin-loading {
+            font-family: var(--admin-font)
+        }
+
+        @media(max-width:1050px) {
+            .admin-content-grid {
+                grid-template-columns: 1fr
+            }
+
+            .product-table {
+                max-height: none
+            }
+
+            .editor-panel {
+                max-width: none
+            }
+
+            .admin-form-row {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:650px) {
+            .login-shell {
+                grid-template-columns: 1fr
+            }
+
+            .login-panel {
+                width: min(410px, calc(100% - 38px));
+                padding: 38px 0
+            }
+
+            .login-panel>.admin-brand {
+                margin-bottom: 22px
+            }
+
+            .login-aside {
+                display: none
+            }
+
+            .admin-shell {
+                grid-template-columns: 1fr
+            }
+
+            .admin-sidebar {
+                position: static;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4px;
+                padding: 12px
+            }
+
+            .admin-sidebar .admin-brand {
+                grid-column: 1/-1;
+                padding: 3px 4px 10px
+            }
+
+            .sidebar-label {
+                grid-column: 1/-1;
+                padding-bottom: 0
+            }
+
+            .sidebar-link {
+                padding: 9px 6px;
+                font-size: 10px
+            }
+
+            .sidebar-bottom {
+                grid-column: 1/-1;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 6px;
+                padding: 10px 4px 0
+            }
+
+            .admin-main {
+                padding: 18px 12px 24px
+            }
+
+            .admin-topbar {
+                margin-bottom: 14px
+            }
+
+            .admin-topbar h1 {
+                font-size: 21px
+            }
+
+            .editor-panel,
+            .catalogue-panel,
+            .enquiries-panel {
+                padding: 13px
+            }
+
+            .admin-form-row {
+                grid-template-columns: 1fr
+            }
+
+            .product-table-head,
+            .product-row {
+                grid-template-columns: minmax(110px, 1fr) 68px 76px;
+                gap: 6px
+            }
+
+            .product-row strong {
+                font-size: 9px
+            }
+
+            .row-actions {
+                gap: 6px
+            }
+
+            .row-actions button {
+                font-size: 8px
+            }
+
+            .enquiry-row {
+                grid-template-columns: 1fr auto;
+                gap: 9px
+            }
+
+            .enquiry-copy {
+                grid-column: 1/-1;
+                grid-row: 2
+            }
+
+            .enquiry-row select {
+                grid-column: 2;
+                grid-row: 1
+            }
+
+            .admin-empty {
+                padding: 45px 10px
+            }
+        }

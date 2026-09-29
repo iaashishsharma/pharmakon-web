@@ -1,0 +1,19 @@
+.new-float{
+	position:fixed;
+	width:68px;
+	height:76px;
+	bottom:190px;
+	right:20px;
+	
+	color:#FFF;
+	
+	text-align:center;
+  font-size:30px;
+	
+  z-index:200;
+}
+
+.my-float{
+	margin-top:16px;
+}/* CSS Document */
+

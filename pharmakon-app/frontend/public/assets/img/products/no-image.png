@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f4f8f6" rx="12"/>
+  <g transform="translate(100, 80)">
+    <circle cx="50" cy="50" r="45" fill="#d5f0e8" stroke="#087f78" stroke-width="4"/>
+    <path d="M35 50 L65 50 M50 35 L50 65" stroke="#087f78" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="210" font-family="DM Sans, sans-serif" font-size="16" font-weight="600" fill="#087f78" text-anchor="middle">Pharmakon Quality Care</text>
+  <text x="150" y="235" font-family="DM Sans, sans-serif" font-size="12" fill="#657981" text-anchor="middle">Product Formulation</text>
+</svg>
