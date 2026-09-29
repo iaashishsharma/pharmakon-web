@@ -1,0 +1,497 @@
+:root {
+  --dp-green: #02699c;
+  --dp-green-dark: #03263e;
+  --dp-mint: #e8f6fb;
+  --dp-gold: #15b38a;
+  --dp-border: rgba(2, 105, 156, 0.12);
+  --dp-muted: #5f7384;
+}
+
+.gt-breadcrumb-wrapper {
+  position: relative;
+}
+
+.gt-breadcrumb-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(3, 38, 62, 0.86), rgba(2, 105, 156, 0.58));
+  pointer-events: none;
+}
+
+.gt-breadcrumb-wrapper .container,
+.gt-breadcrumb-wrapper .gt-right-shape {
+  position: relative;
+  z-index: 2;
+}
+
+.gt-breadcrumb-wrapper .gt-page-heading {
+  padding-top: 220px;
+  padding-bottom: 100px;
+}
+
+.dental-shop-section {
+  padding-top: 72px;
+  padding-bottom: 96px;
+  background: linear-gradient(180deg, #f8fcfe 0%, #ffffff 100%);
+}
+
+.dental-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 28px;
+  padding: 18px 22px;
+  border: 1px solid var(--dp-border);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(2, 105, 156, 0.06);
+}
+
+.dental-toolbar-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.dental-view-toggle {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 8px;
+  background: #eef6fa;
+}
+
+.dental-view-toggle button {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--dp-muted);
+  background: transparent;
+  transition: 0.2s ease;
+}
+
+.dental-view-toggle button.active,
+.dental-view-toggle button:hover {
+  color: #ffffff;
+  background: var(--dp-green);
+}
+
+.dental-result-count {
+  margin: 0;
+  color: var(--dp-muted);
+  font-weight: 600;
+}
+
+.dental-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dental-filter-tabs button {
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid var(--dp-border);
+  border-radius: 999px;
+  color: var(--dp-green-dark);
+  font-weight: 700;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.dental-filter-tabs button.active,
+.dental-filter-tabs button:hover {
+  color: #ffffff;
+  border-color: var(--dp-green);
+  background: var(--dp-green);
+}
+
+.dental-product-card {
+  height: 100%;
+  border: 1px solid var(--dp-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(2, 105, 156, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dental-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 52px rgba(2, 105, 156, 0.14);
+}
+
+.dental-product-image {
+  position: relative;
+  min-height: 270px;
+  padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #edf7fb 0%, #ffffff 100%);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.dental-product-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 38, 62, 0.42);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.dental-product-image:hover::before {
+  opacity: 1;
+}
+
+.dental-product-image img {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.dental-product-image:hover img {
+  transform: scale(1.06);
+}
+
+.dental-type-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--dp-gold), #0d9f78);
+  box-shadow: 0 8px 18px rgba(21, 179, 138, 0.28);
+}
+
+.dental-zoom-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--dp-green-dark);
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(3, 38, 62, 0.2);
+  transform: translate(-50%, -50%) scale(0.85);
+  opacity: 0;
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+.dental-product-image:hover .dental-zoom-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dental-zoom-btn i {
+  font-size: 22px;
+}
+
+.dental-product-body {
+  padding: 24px 22px 26px;
+  border-top: 1px solid rgba(2, 105, 156, 0.08);
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+}
+
+.dental-product-title-wrap {
+  position: relative;
+  margin-bottom: 18px;
+  padding: 16px 16px 16px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(2, 105, 156, 0.08), rgba(21, 179, 138, 0.06));
+  border-left: 4px solid var(--dp-green);
+}
+
+.dental-product-body h3 {
+  margin: 0;
+  color: var(--dp-green-dark);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+
+.dental-info-block {
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.dental-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.composition-block {
+  background: linear-gradient(180deg, #f0f9fc 0%, #ffffff 100%);
+  border-color: rgba(2, 105, 156, 0.1);
+}
+
+.packing-block {
+  background: linear-gradient(180deg, #f3fbf8 0%, #ffffff 100%);
+  border-color: rgba(21, 179, 138, 0.14);
+}
+
+.dental-info-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--dp-green-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.dental-info-label i {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.composition-block .dental-info-label i {
+  background: var(--dp-green);
+}
+
+.packing-block .dental-info-label i {
+  background: var(--dp-gold);
+}
+
+.dental-info-block p {
+  margin: 0;
+  color: #3d5568;
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.dental-list-view .dental-product-card {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+}
+
+.dental-list-view .dental-product-image {
+  min-height: 100%;
+}
+
+.dental-list-view .dental-product-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dental-zoom-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(3, 38, 62, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.dental-zoom-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dental-zoom-stage {
+  max-width: min(92vw, 900px);
+  text-align: center;
+  transform: scale(0.92);
+  transition: transform 0.28s ease;
+}
+
+.dental-zoom-lightbox.active .dental-zoom-stage {
+  transform: scale(1);
+}
+
+.dental-zoom-stage img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.dental-zoom-stage p {
+  margin: 16px 0 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dental-zoom-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.14);
+  transition: 0.2s ease;
+}
+
+.dental-zoom-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.dental-cta-band {
+  padding: 56px 0;
+  background: linear-gradient(135deg, #03263e 0%, #02699c 100%);
+}
+
+.dental-cta-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.dental-cta-wrap h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.dental-cta-wrap p {
+  margin: 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+}
+
+.dental-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dental-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.dental-btn-primary {
+  color: var(--dp-green-dark);
+  background: #ffffff;
+}
+
+.dental-btn-primary:hover {
+  color: var(--dp-green-dark);
+  transform: translateY(-2px);
+}
+
+.dental-btn-outline {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.dental-btn-outline:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.dental-empty-state {
+  display: none;
+  padding: 48px 24px;
+  border: 1px dashed var(--dp-border);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--dp-muted);
+}
+
+.dental-empty-state.show {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .dental-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .dental-toolbar-left {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .dental-result-count {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .dental-filter-tabs {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 2px 2px 8px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dental-filter-tabs button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  body:has(.dental-shop-section) .float,
+  body:has(.dental-shop-section) .new-float {
+    display: none !important;
+  }
+
+  .dental-list-view .dental-product-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dental-product-body h3 {
+    font-size: 19px;
+  }
+}
