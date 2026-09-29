@@ -53,8 +53,16 @@ a {
 
 /* Hide legacy HTML preloader overlay to prevent stuck loading screen in Next.js */
 #preloader,
-.preloader {
+.preloader,
+.preloader-holder,
+.loader-section,
+.loader,
+.letters-loading {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -99999 !important;
 }
 
 /* Footer Contrast & Style Enforcement */

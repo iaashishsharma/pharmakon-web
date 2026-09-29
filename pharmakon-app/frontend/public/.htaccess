@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Force HTTPS if available
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Serve existing files and folders directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite extensionless clean URLs to corresponding .html files
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*)$ /$1.html [L]
