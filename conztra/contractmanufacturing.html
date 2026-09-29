@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Gramentheme">
+        <meta name="description" content="Third-party and contract manufacturing services by Pharmakon Lifesciences">
+        <!-- ======== Page title ============ -->
+        <title>Contract Manufacturing | PHARMAKON LIFESCIENCES</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Splitting.css >>-->
+        <link rel="stylesheet" href="assets/css/splitting.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/rtl.css">
+        <link rel="stylesheet" href="assets/css/box-layout.css">
+        <!--<< Icomon.css >>-->
+        <link rel="stylesheet" href="assets/css/icomon.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="logo.css">
+        <style>
+            .cm-page {
+                --cm-green: #02699c;
+                --cm-green-dark: #03263e;
+                --cm-mint: #eef9fd;
+                --cm-gold: #38a9d6;
+                --cm-text: #24352d;
+                --cm-muted: #65746c;
+                --cm-border: rgba(2, 105, 156, 0.16);
+                background: #ffffff;
+                color: var(--cm-text);
+                overflow: hidden;
+            }
+
+            .cm-page img {
+                max-width: 100%;
+            }
+
+            .cm-breadcrumb-wrapper {
+                position: relative;
+            }
+
+            .cm-breadcrumb-wrapper::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(90deg, rgba(3, 38, 62, 0.86), rgba(2, 105, 156, 0.58));
+                pointer-events: none;
+            }
+
+            .cm-breadcrumb-wrapper .container,
+            .cm-breadcrumb-wrapper .gt-right-shape {
+                position: relative;
+                z-index: 2;
+            }
+
+            .cm-breadcrumb-wrapper .gt-page-heading {
+                padding-top: 220px;
+                padding-bottom: 100px;
+            }
+
+            .cm-intro {
+                position: relative;
+                background: linear-gradient(180deg, #f5fbfd 0%, #ffffff 52%, #f7fbf9 100%);
+            }
+
+            .cm-intro::before {
+                content: "";
+                position: absolute;
+                top: 78px;
+                right: 7%;
+                width: 220px;
+                height: 220px;
+                border: 1px solid rgba(2, 105, 156, 0.18);
+                border-radius: 50%;
+            }
+
+            .cm-intro-grid {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+                gap: 56px;
+                align-items: center;
+            }
+
+            .cm-intro-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-top: 30px;
+            }
+
+            .cm-hero {
+                position: relative;
+                padding: 105px 0 95px;
+                background:
+                    linear-gradient(115deg, rgba(3, 38, 62, 0.97) 0%, rgba(2, 105, 156, 0.9) 54%, rgba(245, 251, 253, 0.98) 54%, rgba(255, 255, 255, 1) 100%);
+                isolation: isolate;
+            }
+
+            .cm-hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                background-size: 58px 58px;
+                opacity: 0.28;
+                z-index: -1;
+            }
+
+            .cm-hero::after {
+                content: "";
+                position: absolute;
+                inset: auto 7% -78px auto;
+                width: 210px;
+                height: 210px;
+                border: 28px solid rgba(56, 169, 214, 0.23);
+                border-radius: 50%;
+                z-index: -1;
+            }
+
+            .cm-hero-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.82fr);
+                align-items: center;
+                gap: 54px;
+            }
+
+            .cm-hero-copy {
+                max-width: 790px;
+            }
+
+            .cm-eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 8px 14px;
+                margin-bottom: 22px;
+                border: 1px solid rgba(255, 255, 255, 0.28);
+                border-radius: 999px;
+                color: #ffffff;
+                background: rgba(255, 255, 255, 0.12);
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            .cm-eyebrow i {
+                color: var(--cm-gold);
+            }
+
+            .cm-hero h1 {
+                margin: 0 0 22px;
+                color: #ffffff;
+                font-size: clamp(38px, 5.2vw, 66px);
+                line-height: 1.06;
+                letter-spacing: 0;
+            }
+
+            .cm-hero p {
+                max-width: 740px;
+                color: rgba(255, 255, 255, 0.88);
+                font-size: 18px;
+                line-height: 1.75;
+            }
+
+            .cm-hero-visual {
+                position: relative;
+                min-height: 545px;
+            }
+
+            .cm-hero-frame {
+                position: absolute;
+                inset: 0 0 74px 28px;
+                padding: 14px;
+                border-radius: 8px;
+                background: #ffffff;
+                box-shadow: 0 30px 70px rgba(3, 38, 62, 0.16);
+            }
+
+            .cm-hero-frame img {
+                width: 100%;
+                height: 100%;
+                min-height: 420px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+            .cm-hero-card {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: min(84%, 360px);
+                padding: 22px;
+                border-radius: 8px;
+                background: #ffffff;
+                box-shadow: 0 22px 48px rgba(3, 38, 62, 0.14);
+                border-left: 5px solid var(--cm-gold);
+            }
+
+            .cm-hero-card img {
+                width: 88px;
+                height: 72px;
+                object-fit: cover;
+                border-radius: 6px;
+                float: left;
+                margin: 0 16px 8px 0;
+            }
+
+            .cm-hero-card strong {
+                display: block;
+                margin-bottom: 6px;
+                color: var(--cm-green-dark);
+                font-size: 18px;
+            }
+
+            .cm-hero-card span {
+                color: var(--cm-muted);
+                line-height: 1.55;
+            }
+
+            .cm-hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-top: 34px;
+            }
+
+            .cm-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                min-height: 54px;
+                padding: 15px 24px;
+                border-radius: 4px;
+                font-weight: 800;
+                line-height: 1;
+                transition: 0.25s ease;
+            }
+
+            .cm-btn-primary {
+                color: #ffffff;
+                background: var(--cm-green);
+            }
+
+            .cm-btn-primary:hover {
+                color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 14px 30px rgba(2, 105, 156, 0.22);
+            }
+
+            .cm-btn-outline {
+                color: var(--cm-green);
+                border: 1px solid rgba(2, 105, 156, 0.26);
+                background: #ffffff;
+            }
+
+            .cm-btn-outline:hover {
+                color: var(--cm-green-dark);
+                border-color: var(--cm-gold);
+                transform: translateY(-2px);
+            }
+
+            .cm-stats {
+                margin-top: 0;
+                position: relative;
+                z-index: 2;
+                padding: 0 0 90px;
+                background: #ffffff;
+            }
+
+            .cm-stat-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 16px;
+                padding: 20px;
+                border: 1px solid var(--cm-border);
+                border-radius: 8px;
+                background: #ffffff;
+                box-shadow: 0 22px 55px rgba(2, 105, 156, 0.1);
+            }
+
+            .cm-stat {
+                padding: 22px 18px;
+                border-radius: 6px;
+                background: linear-gradient(180deg, #f5fbfd 0%, #ffffff 100%);
+                border: 1px solid rgba(2, 105, 156, 0.08);
+            }
+
+            .cm-stat i {
+                display: inline-flex;
+                width: 42px;
+                height: 42px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 16px;
+                color: var(--cm-green);
+                background: var(--cm-mint);
+                border-radius: 50%;
+                font-size: 18px;
+            }
+
+            .cm-stat h3 {
+                margin: 0 0 8px;
+                color: var(--cm-green-dark);
+                font-size: 22px;
+                line-height: 1.2;
+            }
+
+            .cm-stat p {
+                margin: 0;
+                color: var(--cm-muted);
+                line-height: 1.55;
+            }
+
+            .cm-section {
+                padding: 96px 0;
+            }
+
+            .cm-section-soft {
+                background: linear-gradient(180deg, #f5fbfd 0%, #ffffff 100%);
+            }
+
+            .cm-section-title {
+                margin-bottom: 34px;
+            }
+
+            .cm-kicker {
+                display: inline-flex;
+                align-items: center;
+                gap: 9px;
+                margin-bottom: 13px;
+                color: #02699c;
+                font-size: 14px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            .cm-kicker::before {
+                content: "";
+                width: 34px;
+                height: 2px;
+                background: #38a9d6;
+            }
+
+            .cm-section-title h2 {
+                margin: 0;
+                color: #03263e;
+                font-size: clamp(30px, 4vw, 48px);
+                line-height: 1.13;
+                letter-spacing: 0;
+            }
+
+            .cm-section-title p,
+            .cm-rich-text p {
+                color: var(--cm-muted);
+                font-size: 16px;
+                line-height: 1.82;
+            }
+
+            .cm-image-stack {
+                position: relative;
+                min-height: 520px;
+                padding: 22px;
+                border-radius: 8px;
+                background: linear-gradient(145deg, #eaf7fc, #ffffff);
+                border: 1px solid var(--cm-border);
+            }
+
+            .cm-image-stack img {
+                position: absolute;
+                object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 24px 55px rgba(3, 38, 62, 0.14);
+            }
+
+            .cm-image-stack .cm-img-main {
+                top: 22px;
+                right: 22px;
+                width: 72%;
+                height: 360px;
+            }
+
+            .cm-image-stack .cm-img-small {
+                left: 22px;
+                bottom: 22px;
+                width: 50%;
+                height: 240px;
+                border: 10px solid #ffffff;
+            }
+
+            .cm-image-single {
+                min-height: auto;
+                padding: 14px;
+                background: #ffffff;
+                box-shadow: 0 24px 58px rgba(3, 38, 62, 0.13);
+            }
+
+            .cm-image-single img {
+                position: static;
+                display: block;
+                width: 100%;
+                height: 455px;
+                object-fit: cover;
+                border-radius: 7px;
+                box-shadow: none;
+            }
+
+            .cm-image-single figcaption {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin: 0;
+                padding: 18px 18px 6px;
+                color: #52686f;
+                font-weight: 700;
+                line-height: 1.5;
+            }
+
+            .cm-image-single figcaption i {
+                display: inline-flex;
+                width: 38px;
+                height: 38px;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 38px;
+                border-radius: 50%;
+                color: #ffffff;
+                background: #02699c;
+            }
+
+            .cm-image-full {
+                background: linear-gradient(145deg, #f5fbfd, #ffffff);
+            }
+
+            .cm-image-full img {
+                height: 430px;
+                object-fit: contain;
+                object-position: center;
+                background: #f8fcfd;
+            }
+
+            .cm-badge {
+                position: absolute;
+                right: 28px;
+                bottom: 28px;
+                width: 190px;
+                padding: 22px;
+                border-radius: 8px;
+                color: #ffffff;
+                background: var(--cm-green);
+                box-shadow: 0 18px 38px rgba(2, 105, 156, 0.22);
+            }
+
+            .cm-badge strong {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 34px;
+                line-height: 1;
+            }
+
+            .cm-media-showcase {
+                padding: 0 0 96px;
+                background: transparent;
+            }
+
+            .cm-capability-layout {
+                display: grid;
+                grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);
+                gap: 28px;
+                align-items: stretch;
+            }
+
+            .cm-capability-photo {
+                margin: 0;
+                padding: 14px;
+                border: 1px solid var(--cm-border);
+                border-radius: 8px;
+                background: #ffffff;
+                box-shadow: 0 22px 55px rgba(2, 105, 156, 0.1);
+            }
+
+            .cm-capability-photo img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 460px;
+                object-fit: cover;
+                border-radius: 7px;
+            }
+
+            .cm-capability-grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+
+            .cm-capability-card {
+                min-height: 100%;
+                padding: 28px;
+                border: 1px solid rgba(2, 105, 156, 0.14);
+                border-radius: 8px;
+                background: #ffffff;
+                box-shadow: 0 16px 36px rgba(3, 38, 62, 0.06);
+            }
+
+            .cm-capability-card i {
+                display: inline-flex;
+                width: 54px;
+                height: 54px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                border-radius: 50%;
+                color: #ffffff;
+                background: linear-gradient(135deg, #02699c, #38a9d6);
+                font-size: 22px;
+            }
+
+            .cm-capability-card h3 {
+                margin-bottom: 10px;
+                color: #03263e;
+                font-size: 21px;
+            }
+
+            .cm-capability-card p {
+                margin: 0;
+                color: var(--cm-muted);
+                line-height: 1.68;
+            }
+
+            .cm-service-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 24px;
+            }
+
+            .cm-service {
+                position: relative;
+                min-height: 100%;
+                padding: 30px;
+                border: 1px solid var(--cm-border);
+                border-radius: 8px;
+                background: #ffffff;
+                overflow: hidden;
+                transition: 0.25s ease;
+            }
+
+            .cm-service::before {
+                content: "";
+                position: absolute;
+                inset: 0 0 auto 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--cm-green), var(--cm-gold));
+            }
+
+            .cm-service:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 22px 44px rgba(2, 105, 156, 0.11);
+            }
+
+            .cm-service-icon {
+                display: inline-flex;
+                width: 58px;
+                height: 58px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 22px;
+                border-radius: 50%;
+                color: var(--cm-green);
+                background: var(--cm-mint);
+                font-size: 24px;
+            }
+
+            .cm-service h3 {
+                margin-bottom: 12px;
+                color: #03263e;
+                font-size: 22px;
+            }
+
+            .cm-service p {
+                margin: 0;
+                color: var(--cm-muted);
+                line-height: 1.74;
+            }
+
+            .cm-process {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 18px;
+                counter-reset: process;
+            }
+
+            .cm-process-step {
+                position: relative;
+                padding: 28px 22px;
+                border-radius: 8px;
+                background: #ffffff;
+                border: 1px solid var(--cm-border);
+                counter-increment: process;
+            }
+
+            .cm-process-step::before {
+                content: counter(process, decimal-leading-zero);
+                display: inline-flex;
+                width: 46px;
+                height: 46px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                border-radius: 50%;
+                color: #ffffff;
+                background: var(--cm-green);
+                font-weight: 800;
+            }
+
+            .cm-process-step h3 {
+                margin-bottom: 10px;
+                color: #03263e;
+                font-size: 20px;
+            }
+
+            .cm-process-step p {
+                margin: 0;
+                color: var(--cm-muted);
+                line-height: 1.65;
+            }
+
+            .cm-check-panel {
+                height: 100%;
+                padding: 36px;
+                border-radius: 8px;
+                color: #ffffff;
+                background:
+                    linear-gradient(135deg, rgba(3, 38, 62, 0.95), rgba(2, 105, 156, 0.9)),
+                    url("assets/images/Custom-Branding-and-Packaging-Available.jpeg") center / cover no-repeat;
+            }
+
+            .cm-check-panel h2 {
+                color: #ffffff;
+                margin-bottom: 18px;
+                font-size: 36px;
+            }
+
+            .cm-check-panel p {
+                color: rgba(255, 255, 255, 0.86);
+                line-height: 1.78;
+            }
+
+            .cm-check-list {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .cm-check-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 18px;
+                border: 1px solid var(--cm-border);
+                border-radius: 8px;
+                color: #24394c;
+                background: #ffffff;
+                font-weight: 700;
+                line-height: 1.45;
+            }
+
+            .cm-check-list i {
+                margin-top: 2px;
+                color: var(--cm-green);
+            }
+
+            .cm-cta {
+                position: relative;
+                padding: 76px 0;
+                background:
+                    linear-gradient(100deg, rgba(3, 38, 62, 0.95), rgba(2, 105, 156, 0.88)),
+                    url("assets/images/images.jpg") center / cover no-repeat;
+            }
+
+            .cm-cta h2 {
+                margin: 0 0 14px;
+                color: #ffffff;
+                font-size: clamp(30px, 4vw, 48px);
+            }
+
+            .cm-cta p {
+                max-width: 760px;
+                margin: 0;
+                color: rgba(255, 255, 255, 0.86);
+                font-size: 17px;
+                line-height: 1.76;
+            }
+
+            @media (max-width: 1199px) {
+                .cm-service-grid,
+                .cm-process {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .cm-stat-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .cm-intro-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .cm-breadcrumb-wrapper .gt-page-heading {
+                    padding-top: 185px;
+                    padding-bottom: 86px;
+                }
+
+                .cm-section {
+                    padding: 76px 0;
+                }
+
+                .cm-image-stack {
+                    min-height: 520px;
+                    margin-top: 38px;
+                }
+
+                .cm-capability-layout {
+                    grid-template-columns: 1fr;
+                }
+
+                .cm-capability-photo img {
+                    min-height: 340px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                .cm-breadcrumb-wrapper .gt-page-heading {
+                    padding-top: 160px;
+                    padding-bottom: 74px;
+                }
+
+                .cm-intro-actions,
+                .cm-btn {
+                    width: 100%;
+                }
+
+                .cm-stat-grid,
+                .cm-service-grid,
+                .cm-process,
+                .cm-check-list {
+                    grid-template-columns: 1fr;
+                }
+
+                .cm-image-stack {
+                    min-height: auto;
+                    padding: 14px;
+                }
+
+                .cm-image-stack:not(.cm-image-single) img,
+                .cm-image-stack .cm-img-main,
+                .cm-image-stack .cm-img-small {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    min-height: 230px;
+                    margin-bottom: 18px;
+                    border: 0;
+                }
+
+                .cm-image-single img {
+                    height: auto;
+                    min-height: 260px;
+                }
+
+                .cm-media-showcase {
+                    padding-bottom: 74px;
+                }
+
+                .cm-capability-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .cm-image-full img,
+                .cm-capability-photo img {
+                    height: auto;
+                    min-height: 260px;
+                }
+
+                .cm-badge {
+                    position: static;
+                    width: 100%;
+                }
+
+                .cm-check-panel {
+                    margin-bottom: 24px;
+                    padding: 28px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+     <div class="page-wrapper">
+     <!-- Preloader Start -->
+      <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="P" class="letters-loading">P</span>
+                <span data-text-preloader="H" class="letters-loading">H</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="R" class="letters-loading">R</span>
+                <span data-text-preloader="M" class="letters-loading">M</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="K" class="letters-loading">K</span>
+                <span data-text-preloader="O" class="letters-loading">O</span>
+                <span data-text-preloader="N" class="letters-loading">N</span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GT Back To Top Start -->
+    <button id="gt-back-top" class="gt-back-to-top show">
+       <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- GT MouseCursor Start -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"></div>
+
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index-3.html">
+                                <img src="assets/img/logo/logo.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                            <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                       At PHARMAKON LIFESCIENCES, we are committed to delivering high-quality pharmaceutical productsthrough advanced manufacturing, trusted third-party solutions, and reliable PCD pharma servicesdesigned to support better healthcare outcomes.
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">163G, SEC 3, Hsiidc, Karnal.</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@example.com"><span class="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+919802002727">+91 9802 002 727</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                        </div>
+                        <a href="#" class="gt-theme-btn">
+                            <span class="gt-text-btn">
+                                <span class="gt-text-2">Contact Us <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </a>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+        <!-- Header-top Section-3 Start -->
+    <div class="header-top-section-3">
+        <div class="container-fluid">
+            <div class="header-top-wrapper-3">
+                <div class="header-left">
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        163G, SEC 3, Hsiidc, Karnal, India
+                    </span>
+                </div>
+                <div class="social-item">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Header Section Start -->
+    <header id="header-sticky" class="header-1 header-3">
+        <div class="container-fluid">
+            <div class="mega-menu-wrapper">
+                <div class="header-main">
+                    <div class="header-left">
+                        <div class="logo">
+							
+							
+							<div class="logo-container-fade">
+  <img src="assets/img/logo/logo.png" alt="Logo 1" class="logo-fade img1">
+  <img src="assets/img/logo/logo2.png" alt="Logo 2" class="logo-fade img2">
+</div>
+							
+							
+							
+							
+							
+                      
+                    </div>
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="index.html">
+                                                About Us 
+                                            </a>
+                                            <ul class="submenu has-homemenu">
+                                                <li>
+                                                    <div class="homemenu-items">
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb">
+                                                                <img src="assets/img/header/home-1.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="about.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2">Overview<i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Overview
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-2.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="vision-mission.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Vision & Mission <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Vision & Mission
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-3.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="#" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Manufacturing Strength <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Manufacturing Strength
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+														
+														
+														
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-4.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="contact.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Contact Us <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                   Contact Us
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+														
+																											
+														
+														
+														
+														
+														
+                                                      
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown active d-xl-none">
+                                            <a href="index.html" class="border-none">
+                                            About Us
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Overview</a></li>
+                                                <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                                <li><a href="#">Manufacturing Strength</a></li>
+                                               
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                            </ul>
+                                        </li>
+                                       <li class="has-dropdown">
+                                            <a href="#">
+                                                Our Products
+                                            </a>
+                                            <ul class="submenu">
+                                           
+                                                                                     
+                                                <li><a href="broad.html">Pharmakon Lifesciences</a></li>
+                                                <li><a href="neuro.html">Neuropathy Care</a></li>
+                                                <li><a href="dental-care.html">Dental Care</a></li>
+												<li><a href="derma.html">Dermatology Care</a></li>
+												<li><a href="GYNAECOLOGY.html">Gynaecology Care</a></li>
+												<li><a href="paedtric.html">Pediatric Care</a></li>
+												<li><a href="ortho.html">Orthopedic Care</a></li>
+												<li><a href="oncology.html">Oncology Care</a></li>
+												
+                                            </ul>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="#">
+                                              Third Party MANUFACTURING
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="contractmanufacturing.html">Contract Manufacturing</a></li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">
+                                                       Third Party Products List
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Tablets</a></li>
+                                                        <li><a href="#">Capsule</a></li>
+                                                        <li><a href="#">Injection</a></li>
+                                                        <li><a href="#">Syrups/ Dry syrups</a></li>
+                                                        <li><a href="#">Herbals</a></li>
+                                                    </ul>
+                                                </li>                                            </ul>
+                                        </li>
+                                    
+										 <li class="has-dropdown">
+                                            <a href="pcd-franchise.html">
+                                                Pcd Franchise
+                                            </a>
+                                            
+                                        </li>
+										
+										
+										
+										 <li class="has-dropdown">
+                                            <a href="contact.html">
+                                                Contact Us
+                                            </a>
+                                            
+                                        </li>
+										
+										
+										
+										
+										
+                                      
+										
+										
+										
+										
+										
+										
+										
+										
+                                    </ul>
+                                </nav>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="header-right d-flex justify-content-end align-items-center">
+                       
+                        <div class="header-right-icon-item">
+                            <div class="phone-icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="content">
+                                <h6> Call us :</h6>
+                                <h6>
+                                     +91-88169-27222
+                                </h6>
+                            </div>
+                        </div>
+                        <a href="#" class="gt-theme-btn">
+                           <div class="border-glow-wrapper">
+  <button class="border-glow-btn">New Launch</button>
+</div>
+                        </a>
+                        <div class="header__hamburger d-xl-none my-auto">
+                            <div class="sidebar__toggle">
+                                <div class="header-bar">
+                                    <img src="assets/img/home-1/dot.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- GT Breadcrunb Section Start -->
+        <div class="gt-breadcrumb-wrapper cm-breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
+            <div class="gt-right-shape">
+                <img src="assets/img/breadcrumb-shape.jpg" alt="img">
+            </div>
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">CONTRACT MANUFACTURING</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="index-3.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            Contract Manufacturing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <main class="cm-page">
+        <section class="cm-section cm-intro">
+            <div class="container">
+                <div class="cm-intro-grid">
+                    <div class="cm-rich-text">
+                        <span class="cm-kicker">Third-Party & Contract Manufacturing</span>
+                        <div class="cm-section-title">
+                            <h2>Your trusted manufacturing partner for premium pharmaceutical products.</h2>
+                        </div>
+                        <p>At Pharmakon Lifesciences, we specialize in Third-Party Manufacturing and Contract Manufacturing of high-quality pharmaceutical products. Backed by experienced professionals, advanced manufacturing facilities, and a commitment to quality, we help brands transform their ideas into market-ready healthcare solutions with complete reliability and confidentiality.</p>
+                        <p>Whether you're launching a new pharmaceutical brand or expanding your existing product portfolio, Pharmakon Lifesciences provides end-to-end manufacturing solutions tailored to your business goals.</p>
+                        <div class="cm-intro-actions">
+                            <a href="tel:8816927222" class="cm-btn cm-btn-primary">Call Now <i class="fa-solid fa-phone"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=919812027027&text=I am interested your pharmakon products" class="cm-btn cm-btn-outline" target="_blank">WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <figure class="cm-image-stack cm-image-single">
+                        <img src="assets/images/pharma-contract-manufacturing.webp" alt="Pharmaceutical contract manufacturing facility">
+                        <figcaption>
+                            <i class="fa-solid fa-kit-medical"></i>
+                            Advanced manufacturing support with reliable quality, documentation, and dispatch planning.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-stats">
+            <div class="container">
+                <div class="cm-stat-grid">
+                    <div class="cm-stat">
+                        <i class="fa-solid fa-award"></i>
+                        <h3>WHO-GMP</h3>
+                        <p>GMP-compliant production systems with controlled quality practices.</p>
+                    </div>
+                    <div class="cm-stat">
+                        <i class="fa-solid fa-vials"></i>
+                        <h3>Custom Formulations</h3>
+                        <p>Product development support aligned with brand and market needs.</p>
+                    </div>
+                    <div class="cm-stat">
+                        <i class="fa-solid fa-tablets"></i>
+                        <h3>Flexible Capacity</h3>
+                        <p>Pilot, medium-scale, and large-volume manufacturing solutions.</p>
+                    </div>
+                    <div class="cm-stat">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Full Support</h3>
+                        <p>Documentation, packaging guidance, and technical consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="cm-section-title">
+                            <span class="cm-kicker">Manufacturing Expertise</span>
+                            <h2>End-to-end solutions tailored to your business goals.</h2>
+                        </div>
+                        <div class="cm-rich-text">
+                            <p>Our partnership extends beyond manufacturing. We provide continuous technical assistance, product development support, packaging guidance, documentation support, and production consultation to help your pharmaceutical products succeed in a competitive marketplace.</p>
+                            <p>Every stage, from raw material procurement to production, packaging, and dispatch, follows clear quality and safety protocols to ensure consistent manufacturing excellence.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure class="cm-image-stack cm-image-single cm-image-full">
+                            <img src="assets/images/Custom-Branding-and-Packaging-Available (1).jpeg" alt="Pharmaceutical branding and packaging">
+                            <figcaption>
+                                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                                Custom branding, packaging guidance, and dispatch-ready presentation for growing pharma brands.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-section cm-section-soft">
+            <div class="container cm-media-showcase">
+                <div class="cm-section-title text-center">
+                    <span class="cm-kicker justify-content-center">Professional Capabilities</span>
+                    <h2>Capability-focused support for quality pharma manufacturing.</h2>
+                </div>
+                <div class="cm-capability-layout">
+                    <figure class="cm-capability-photo">
+                        <img src="assets/images/images.jpg" alt="Pharmaceutical product capability display">
+                    </figure>
+                    <div class="cm-capability-grid">
+                        <div class="cm-capability-card">
+                            <i class="fa-solid fa-vials"></i>
+                            <h3>Formulation Support</h3>
+                            <p>Technical assistance for customized pharmaceutical formulations aligned with therapeutic and market requirements.</p>
+                        </div>
+                        <div class="cm-capability-card">
+                            <i class="fa-solid fa-award"></i>
+                            <h3>Quality Systems</h3>
+                            <p>Batch control, testing discipline, and quality-focused processes for dependable manufacturing output.</p>
+                        </div>
+                        <div class="cm-capability-card">
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                            <h3>Product Readiness</h3>
+                            <p>Packaging guidance and presentation support to make products ready for professional market launch.</p>
+                        </div>
+                        <div class="cm-capability-card">
+                            <i class="fa-solid fa-truck-medical"></i>
+                            <h3>Reliable Dispatch</h3>
+                            <p>Organized documentation, production coordination, and timely dispatch support for business continuity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="cm-section-title text-center">
+                    <span class="cm-kicker justify-content-center">What We Deliver</span>
+                    <h2>Reliable manufacturing built around quality, compliance, and confidentiality.</h2>
+                </div>
+                <div class="cm-service-grid">
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-vials"></i></span>
+                        <h3>Customized Product Development</h3>
+                        <p>Our formulation experts, scientists, and quality professionals work closely with you to develop customized pharmaceutical formulations that align with your brand identity, therapeutic objectives, and market requirements.</p>
+                    </div>
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-kit-medical"></i></span>
+                        <h3>Advanced Manufacturing Facilities</h3>
+                        <p>Our modern manufacturing facilities are equipped with state-of-the-art machinery and operate in accordance with WHO-GMP and Good Manufacturing Practices (GMP).</p>
+                    </div>
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-award"></i></span>
+                        <h3>Uncompromising Quality Assurance</h3>
+                        <p>Every batch undergoes comprehensive testing to ensure purity, potency, safety, stability, and compliance with applicable quality standards.</p>
+                    </div>
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></span>
+                        <h3>Regulatory Compliance</h3>
+                        <p>Our experienced regulatory team assists clients with technical documentation, quality records, and compliance requirements for a smooth manufacturing experience.</p>
+                    </div>
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                        <h3>Complete Confidentiality</h3>
+                        <p>We safeguard your formulations, brand concepts, proprietary information, and intellectual property throughout every stage of the manufacturing process.</p>
+                    </div>
+                    <div class="cm-service">
+                        <span class="cm-service-icon"><i class="fa-solid fa-truck-medical"></i></span>
+                        <h3>Flexible Manufacturing Solutions</h3>
+                        <p>Our scalable operations are designed to accommodate pilot batches, medium-scale production, or large-volume manufacturing while maintaining quality and timely delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-section">
+            <div class="container">
+                <div class="cm-section-title">
+                    <span class="cm-kicker">Manufacturing Flow</span>
+                    <h2>A clear process for dependable output.</h2>
+                </div>
+                <div class="cm-process">
+                    <div class="cm-process-step">
+                        <h3>Requirement Study</h3>
+                        <p>We understand your product goals, therapeutic category, batch size, and documentation needs.</p>
+                    </div>
+                    <div class="cm-process-step">
+                        <h3>Development Support</h3>
+                        <p>Our team supports formulation, packaging guidance, technical assistance, and compliance planning.</p>
+                    </div>
+                    <div class="cm-process-step">
+                        <h3>Quality Production</h3>
+                        <p>Manufacturing is handled through strict process control, quality checks, and GMP-led practices.</p>
+                    </div>
+                    <div class="cm-process-step">
+                        <h3>Dispatch & Partnership</h3>
+                        <p>Finished products are prepared for dispatch with reliable service and continued customer support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-section cm-section-soft">
+            <div class="container">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="cm-check-panel">
+                            <h2>Why Choose Pharmakon Lifesciences?</h2>
+                            <p>Partner with Pharmakon Lifesciences for reliable Third-Party and Contract Manufacturing services. Our expertise, advanced manufacturing capabilities, and customer-focused approach enable us to deliver high-quality pharmaceutical products that meet the highest industry standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul class="cm-check-list">
+                            <li><i class="fa-solid fa-check"></i> WHO-GMP & GMP-Compliant Manufacturing</li>
+                            <li><i class="fa-solid fa-check"></i> High-Quality Pharmaceutical Formulations</li>
+                            <li><i class="fa-solid fa-check"></i> Customized Third-Party Manufacturing Solutions</li>
+                            <li><i class="fa-solid fa-check"></i> Premium Pharmaceutical-Grade Raw Materials</li>
+                            <li><i class="fa-solid fa-check"></i> Strict Quality Control & Batch Testing</li>
+                            <li><i class="fa-solid fa-check"></i> Regulatory & Documentation Support</li>
+                            <li><i class="fa-solid fa-check"></i> Complete Confidentiality & Intellectual Property Protection</li>
+                            <li><i class="fa-solid fa-check"></i> Flexible Production Capacity</li>
+                            <li><i class="fa-solid fa-check"></i> Timely Delivery & Reliable Service</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated Technical & Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cm-cta">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h2>Let's Build Your Pharmaceutical Brand Together</h2>
+                        <p>Whether you are a pharmaceutical company, healthcare distributor, marketing organization, or startup, we are committed to helping you bring safe, effective, and quality-assured medicines to the market. Together, let's manufacture quality pharmaceutical products that improve lives while building a strong and trusted healthcare brand.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="tel:8816927222" class="cm-btn cm-btn-primary">Contact us today <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gt-footer-section footer-bg">
+            <div class="container">
+                <div class="gt-footer-widget-wrapper">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-5 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <a href="index-3.html" class="gt-footer-logo">
+                                        <img src="assets/img/logo/logo1.png" alt="img">
+                                    </a>
+                                </div>
+                                <div class="gt-footer-content">
+                                    <p>
+                                       Innovating Healthcare, Delivering Quality. Premium pharma manufacturing, third-party
+manufacturing and PCD pharma solutions with quality, trust and innovation at the core.
+                                    </p>
+                                    <ul class="gt-contact-list">
+                                        <li>
+                                            <div class="icon">
+                                                <img src="assets/img/call.png" alt="img">
+                                                <span>Phone</span>
+                                            </div>
+                                            <a href="tel:8816927222">8816927222</a>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <img src="assets/img/location.png" alt="img">
+                                                <span>Location</span>
+                                            </div>
+                                            Karnal, Haryana, India
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul class="gt-list-area">
+                                    <li>
+                                        <a href="#">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Quality Assurance
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                          Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 ps-lg-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Our Services</h3>
+                                </div>
+                                <ul class="gt-list-area">
+                                    <li>
+                                        <a href="#">
+                                           Pcd Franchise
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Contract Manufacturing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                           Download
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Our Contact</h3>
+                                </div>
+                                <ul class="gt-contact-content">
+                                    <li>
+                                        <span><i class="fa-solid fa-location-dot"></i></span>
+                                         163G, SEC 3, Hsiidc, Karnal, India
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-phone"></i></span>
+                                        <a href="tel:8816927222">8816927222</a>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-envelope"></i></span>
+                                        <a href="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</a>
+                                    </li>
+                                </ul>
+                                <div class="footer-socials">
+                                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-wrapper">
+                        <p>&copy; 2026&nbsp;<b>Pharmakon</b>. All Rights Reserved.</p>
+                        <div class="gt-social-icon d-flex align-items-center wow fadeInUp" data-wow-delay=".5s">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </div>
+
+        <link rel="stylesheet" href="1.css">
+<a href="https://api.whatsapp.com/send?phone=919812027027&text=I am interested your pharmakon products" class="float" target="_blank">
+ <span ><img src="assets/img/whatsapp.png" width="65" height="65" alt=""/></span>
+</a>
+     <link rel="stylesheet" href="2.css">
+<a  href="tel:8816927222" class="new-float" >
+ <span ><img src="assets/img/download.png" width="70" height="70" alt=""/></span>
+</a>
+
+   
+        <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('popupOverlay').classList.add('show');
+    }, 800);
+  });
+
+  function closeForm() {
+    document.getElementById('popupOverlay').classList.remove('show');
+  }
+</script>
+
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Splitting Js >>-->
+        <script src="assets/js/splitting.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/splitting-animation.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/template-settings.js"></script>
+        <!--<< Template Setting.js >>-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

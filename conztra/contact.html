@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+     
+<head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Gramentheme">
+        <meta name="description" content="Contact Pharmakon Life Sciences">
+        <!-- ======== Page title ============ -->
+        <title>Contact Us - PHARMAKON LIFESCIENCES</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Splitting.css >>-->
+        <link rel="stylesheet" href="assets/css/splitting.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!-- box layout css -->
+        <link rel="stylesheet" href="assets/css/rtl.css">
+        <!-- box layout css -->
+        <link rel="stylesheet" href="assets/css/box-layout.css">
+        <link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css">
+        <!--<< Icomon.css >>-->
+        <link rel="stylesheet" href="assets/css/icomon.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="logo.css">
+        <link rel="stylesheet" href="about-redesign.css">
+            <style>
+            .contact-page-section { background: linear-gradient(180deg, #f5fbff 0%, #ffffff 100%); padding: 100px 0 84px; position: relative; }
+            .contact-page-section:before { background: radial-gradient(circle, rgba(15, 125, 194, .16), rgba(15, 125, 194, 0) 62%); content: ""; height: 360px; left: 4%; position: absolute; top: 70px; width: 360px; pointer-events: none; }
+            .contact-page-section .container { position: relative; z-index: 1; }
+            @keyframes contactFloatIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+            @keyframes contactIconPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(143, 214, 255, .22); } 50% { box-shadow: 0 0 0 8px rgba(143, 214, 255, 0); } }
+            @keyframes contactMapGlow { 0%, 100% { box-shadow: 0 18px 45px rgba(18, 56, 91, .08); } 50% { box-shadow: 0 22px 58px rgba(15, 125, 194, .16); } }
+            .contact-page-intro { display: grid; grid-template-columns: minmax(280px, .95fr) minmax(280px, 1.05fr); gap: 30px; align-items: end; margin-bottom: 36px; }
+            .contact-page-intro h2 { color: #06345f; font-size: 42px; line-height: 1.14; margin-bottom: 0; }
+            .contact-page-intro p { color: #5c6f7f; font-size: 17px; margin: 0; }
+            .contact-trust-row { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 30px; }
+            .contact-trust-item { align-items: center; background: #fff; border: 1px solid rgba(11, 67, 121, .1); border-radius: 8px; box-shadow: 0 12px 32px rgba(18, 56, 91, .06); display: flex; gap: 12px; padding: 16px 18px; }
+            .contact-trust-item i { color: #0f7dc2; font-size: 22px; }
+            .contact-trust-item span { color: #06345f; display: block; font-weight: 800; line-height: 1.25; }
+            .contact-page-grid { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(320px, 1.1fr); gap: 30px; align-items: stretch; }
+            .contact-info-panel, .contact-form-panel { animation: contactFloatIn .75s ease both; background: #fff; border: 1px solid rgba(11, 67, 121, .12); border-radius: 8px; box-shadow: 0 22px 55px rgba(18, 56, 91, .1); height: 100%; padding: 38px; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+            .contact-form-panel { animation-delay: .12s; }
+            .contact-info-panel:hover, .contact-form-panel:hover { border-color: rgba(15, 125, 194, .24); box-shadow: 0 28px 70px rgba(18, 56, 91, .14); transform: translateY(-6px); }
+            .contact-info-panel { background: #06345f; color: #fff; overflow: hidden; position: relative; }
+            .contact-info-panel:after { border: 1px solid rgba(255,255,255,.22); border-radius: 50%; content: ""; height: 180px; position: absolute; right: -72px; top: -62px; width: 180px; }
+            .contact-kicker { color: #0f7dc2; display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 0; margin-bottom: 12px; text-transform: uppercase; }
+            .contact-info-panel .contact-kicker { color: #8fd6ff; }
+            .contact-info-panel h2, .contact-form-panel h2, .contact-map-section h2 { color: #06345f; font-size: 34px; line-height: 1.18; margin-bottom: 18px; }
+            .contact-info-panel h2 { color: #fff; }
+            .contact-info-panel p { color: rgba(255,255,255,.78); margin-bottom: 26px; }
+            .contact-detail-list { display: grid; gap: 16px; margin: 0; padding: 0; position: relative; z-index: 1; }
+            .contact-detail-list li { align-items: flex-start; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; display: grid; gap: 14px; grid-template-columns: 46px 1fr; list-style: none; padding: 14px; transition: background-color .25s ease, transform .25s ease; }
+            .contact-detail-list li:hover { background: rgba(255,255,255,.13); transform: translateX(5px); }
+            .contact-detail-list .icon { align-items: center; animation: contactIconPulse 2.8s ease-in-out infinite; background: rgba(143, 214, 255, .16); border-radius: 8px; color: #8fd6ff; display: flex; font-size: 20px; height: 46px; justify-content: center; width: 46px; }
+            .contact-detail-list span { color: #fff; display: block; font-weight: 700; margin-bottom: 4px; }
+            .contact-detail-list a, .contact-detail-list p { color: rgba(255,255,255,.82); margin: 0; overflow-wrap: anywhere; }
+            .contact-form-panel p { color: #5c6f7f; margin: -6px 0 24px; }
+            .contact-form-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .contact-form-field.full { grid-column: 1 / -1; }
+            .contact-form-field label { color: #06345f; display: block; font-weight: 700; margin-bottom: 8px; }
+            .contact-form-field input, .contact-form-field textarea { background: #f7fbff; border: 1px solid rgba(11, 67, 121, .16); border-radius: 6px; color: #17324a; font-size: 16px; outline: none; padding: 15px 16px; transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease; width: 100%; }
+            .contact-form-field textarea { min-height: 150px; resize: vertical; }
+            .contact-form-field input:focus, .contact-form-field textarea:focus { background: #fff; border-color: #0f7dc2; box-shadow: 0 0 0 4px rgba(15, 125, 194, .12); transform: translateY(-1px); }
+            .contact-submit-row { margin-top: 22px; }
+            .contact-submit-row .gt-theme-btn { border: 0; transition: transform .25s ease, box-shadow .25s ease; }
+            .contact-submit-row .gt-theme-btn:hover { box-shadow: 0 14px 30px rgba(15, 125, 194, .22); transform: translateY(-3px); }
+            .contact-map-section { background: #fff; padding: 0 0 100px; }
+            .contact-map-header { align-items: end; display: flex; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+            .contact-map-header p { color: #5c6f7f; margin: 0; max-width: 520px; }
+            .contact-map-frame { animation: contactMapGlow 4s ease-in-out infinite; border: 1px solid rgba(11, 67, 121, .12); border-radius: 8px; box-shadow: 0 18px 45px rgba(18, 56, 91, .08); overflow: hidden; transition: transform .28s ease; }
+            .contact-map-frame:hover { transform: translateY(-4px); }
+            .contact-map-frame iframe { display: block; height: 430px; width: 100%; }
+            @media (prefers-reduced-motion: reduce) { .contact-info-panel, .contact-form-panel, .contact-detail-list .icon, .contact-map-frame { animation: none; } .contact-info-panel, .contact-form-panel, .contact-detail-list li, .contact-map-frame, .contact-submit-row .gt-theme-btn { transition: none; } }
+            @media (max-width: 991px) { .contact-page-intro, .contact-page-grid { grid-template-columns: 1fr; } .contact-trust-row { grid-template-columns: 1fr; } .contact-map-header { align-items: flex-start; flex-direction: column; } }
+            @media (max-width: 575px) { .contact-page-section { padding: 70px 0 50px; } .contact-page-intro h2 { font-size: 31px; } .contact-info-panel, .contact-form-panel { padding: 24px; } .contact-info-panel h2, .contact-form-panel h2, .contact-map-section h2 { font-size: 28px; } .contact-form-grid { grid-template-columns: 1fr; } .contact-map-frame iframe { height: 340px; } }
+        </style>    </head>
+    <body>
+
+        <div class="page-wrapper">
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">                
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="P" class="letters-loading">P</span>
+                <span data-text-preloader="H" class="letters-loading">H</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="R" class="letters-loading">R</span>
+                <span data-text-preloader="M" class="letters-loading">M</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="K" class="letters-loading">K</span>
+                <span data-text-preloader="O" class="letters-loading">O</span>
+                <span data-text-preloader="N" class="letters-loading">N</span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- GT Back To Top Start -->
+        <button id="gt-back-top" class="gt-back-to-top show">
+           <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        <!-- GT MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                            <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                       At PHARMAKON LIFESCIENCES, we are committed to delivering high-quality pharmaceutical productsthrough advanced manufacturing, trusted third-party solutions, and reliable PCD pharma servicesdesigned to support better healthcare outcomes.
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">163G, SEC 3, Hsiidc, Karnal.</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@pharmakonlifesciences.com"><span class="mailto:info@pharmakonlifesciences.com
+">info@pharmakonlifesciences.com
+</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+919802002727">+91 9802 002 727</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            
+                        </div>
+                        <a href="#" class="gt-theme-btn">
+                            <span class="gt-text-btn">
+                                <span class="gt-text-2">Contact Us <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </a>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+        <!-- Header-top Section-3 Start -->
+    <div class="header-top-section-3">
+        <div class="container-fluid">
+            <div class="header-top-wrapper-3">
+                <div class="header-left">
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        163G, SEC 3, Hsiidc, Karnal, India
+                    </span>
+                </div>
+                <div class="social-item">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Header Section Start -->
+    <header id="header-sticky" class="header-1 header-3">
+        <div class="container-fluid">
+            <div class="mega-menu-wrapper">
+                <div class="header-main">
+                    <div class="header-left">
+                        <div class="logo">
+							
+							
+							<div class="logo-container-fade">
+  <img src="assets/img/logo/logo.png" alt="Logo 1" class="logo-fade img1">
+  <img src="assets/img/logo/logo2.png" alt="Logo 2" class="logo-fade img2">
+</div>
+							
+							
+							
+							
+							
+                      
+                    </div>
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="index.html">
+                                                About Us 
+                                            </a>
+                                            <ul class="submenu has-homemenu">
+                                                <li>
+                                                    <div class="homemenu-items">
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb">
+                                                                <img src="assets/img/header/home-1.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="about.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2">Overview<i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Overview
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-2.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="vision-mission.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Vision & Mission <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Vision & Mission
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-3.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="#" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Manufacturing Strength <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Manufacturing Strength
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+														
+														
+														
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="assets/img/header/home-4.jpg" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="contact.html" class="gt-theme-btn">
+                                                                        <span class="gt-text-btn">
+                                                                            <span class="gt-text-2"> Contact Us <i class="fa-solid fa-arrow-right"></i></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                   Contact Us
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+														
+																											
+														
+														
+														
+														
+														
+                                                      
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown active d-xl-none">
+                                            <a href="index.html" class="border-none">
+                                            About Us
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Overview</a></li>
+                                                <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                                <li><a href="#">Manufacturing Strength</a></li>
+                                               
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                            </ul>
+                                        </li>
+                                       <li class="has-dropdown">
+                                            <a href="#">
+                                                Our Products
+                                            </a>
+                                            <ul class="submenu">
+                                           
+                                                                                     
+                                                 <li><a href="broad.html">Pharmakon Lifesciences</a></li>
+                                                <li><a href="neuro.html">Neuropathy Care</a></li>
+                                                <li><a href="dental-care.html">Dental Care</a></li>
+												<li><a href="derma.html">Dermatology Care</a></li>
+												<li><a href="GYNAECOLOGY.html">Gynaecology Care</a></li>
+												<li><a href="paedtric.html">Pediatric Care</a></li>
+												<li><a href="ortho.html">Orthopedic Care</a></li>
+												<li><a href="oncology.html">Oncology Care</a></li>
+												
+                                            </ul>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="#">
+                                              Third Party MANUFACTURING
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="contractmanufacturing.html">Contract Manufacturing</a></li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">
+                                                       Third Party Products List
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Tablets</a></li>
+                                                        <li><a href="#">Capsule</a></li>
+                                                        <li><a href="#">Injection</a></li>
+                                                        <li><a href="#">Syrups/ Dry syrups</a></li>
+                                                        <li><a href="#">Herbals</a></li>
+                                                    </ul>
+                                                </li>                                            </ul>
+                                        </li>
+                                    
+										 <li class="has-dropdown">
+                                            <a href="pcd-franchise.html">
+                                                Pcd Franchise
+                                            </a>
+                                            
+                                        </li>
+										
+										
+										
+										 <li class="has-dropdown">
+                                            <a href="contact.html">
+                                                Contact Us
+                                            </a>
+                                            
+                                        </li>
+										
+										
+										
+										
+										
+                                      
+										
+										
+										
+										
+										
+										
+										
+										
+                                    </ul>
+                                </nav>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="header-right d-flex justify-content-end align-items-center">
+                       
+                        <div class="header-right-icon-item">
+                            <div class="phone-icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="content">
+                                <h6> Call us :</h6>
+                                <h6>
+                                     +91-88169-27222
+                                </h6>
+                            </div>
+                        </div>
+                        <a href="#" class="gt-theme-btn">
+                           <div class="border-glow-wrapper">
+  <button class="border-glow-btn">New Launch</button>
+</div>
+                        </a>
+                        <div class="header__hamburger d-xl-none my-auto">
+                            <div class="sidebar__toggle">
+                                <div class="header-bar">
+                                    <img src="assets/img/home-1/dot.svg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <!-- GT Search Start -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" name="search" placeholder="Search Here...">
+                <button type="submit" aria-label="search submit" class="search-btn">
+                    <span><i class="fa-regular fa-magnifying-glass"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    
+
+        <!-- GT Breadcrunb Section Start -->
+        <div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
+            <div class="gt-right-shape">
+                <img src="assets/img/breadcrumb-shape.jpg" alt="img">
+            </div>
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">CONTACT US</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<section class="contact-page-section">
+        <div class="container">
+            <div class="contact-page-grid">
+                <div class="contact-info-panel wow fadeInUp" data-wow-delay=".2s">
+                    <span class="contact-kicker">Corporate Contact</span>
+                    <h2>Reach our team for pharma partnerships and product assistance.</h2>
+                    <p>Use the details below for business enquiries, product availability, documentation, franchise discussion, or manufacturing coordination.</p>
+                    <ul class="contact-detail-list">
+                        <li><div class="icon"><i class="fa-solid fa-building"></i></div><div><span>Company :</span><p>PARUL HEALTHCARE PVT LTD</p></div></li>
+                        <li><div class="icon"><i class="fa-solid fa-location-dot"></i></div><div><span>Address :</span><p>163G, SEC 3, Hsiidc, Karnal.</p></div></li>
+                        <li><div class="icon"><i class="fa-solid fa-file-invoice"></i></div><div><span>GST :</span><p>06AAJCP3441L1Z8</p></div></li>
+                        <li><div class="icon"><i class="fa-solid fa-envelope"></i></div><div><span>Email :</span><a href="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</a></div></li>
+                        <li><div class="icon"><i class="fa-solid fa-phone"></i></div><div><span>Phone :</span><a href="tel:+919802002727">9802002727</a></div></li>
+                    </ul>
+                </div>
+                <div class="contact-form-panel wow fadeInUp" data-wow-delay=".3s">
+                    <span class="contact-kicker">Send Your Requirement</span>
+                    <h2>Tell us how we can support you.</h2>
+                    <p>Please share your requirement clearly so our team can connect you with the right department.</p>
+                    <form action="sendmail.php" id="contact-form" method="POST" name="form1" >
+                        <div class="contact-form-grid">
+                            <div class="contact-form-field">
+                                <label for="contact-name">Full Name :</label>
+                                <input type="text" name="name" id="name" placeholder="Enter full name" required>
+                            </div>
+                            <div class="contact-form-field">
+                                <label for="contact-phone">Phone No :</label>
+                                <input type="tel" name="phone" id="phone" placeholder="Enter phone number" required>
+                            </div>
+                            <div class="contact-form-field full">
+                                <label for="contact-email">Email :</label>
+                                <input type="email" name="email" id="email" placeholder="Enter business email" required>
+                            </div>
+                            <div class="contact-form-field full">
+                                <label for="contact-message">Message :</label>
+                                <textarea name="message" id="message" placeholder="Mention product, franchise, third-party manufacturing, or supply requirement" required></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-submit-row">
+                            <button type="submit" class="gt-theme-btn">
+                                <span class="gt-text-btn"><span class="gt-text-2">SEND MESSAGE <i class="fa-solid fa-arrow-right"></i></span></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-map-section">
+        <div class="container">
+            <div class="contact-map-header wow fadeInUp" data-wow-delay=".2s">
+                <div>
+                    <span class="contact-kicker">Our Location</span>
+                    <h2>Visit Parul Healthcare Pvt Ltd, Karnal.</h2>
+                </div>
+                <p>Located at HSIIDC, Karnal, our office supports partners and healthcare businesses with professional coordination and dependable service.</p>
+            </div>
+            <div class="contact-map-frame wow fadeInUp" data-wow-delay=".3s">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.830012542831!2d76.98362532553935!3d29.666706725116047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e7025c35e54bf%3A0x32c774c487b85bc2!2sParul%20Healthcare%20Pvt%20Ltd%20Third%20Party%20Manufacturing!5e0!3m2!1sen!2sin!4v1782410845382!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Parul Healthcare Pvt Ltd Third Party Manufacturing Google Map"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!-- GT Footer Section Start -->
+    <footer class="gt-footer-section footer-bg">
+            <div class="container">
+                <div class="gt-footer-widget-wrapper">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-5 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <a href="index.html" class="gt-footer-logo">
+                                        <img src="assets/img/logo/logo1.png" alt="img">
+                                    </a>
+                                </div>
+                                <div class="gt-footer-content">
+                                    <p>
+                                       Innovating Healthcare, Delivering Quality. Premium pharma manufacturing, third-party
+manufacturing and PCD pharma solutions with quality, trust and innovation at the core.
+                                    </p>
+                                    <ul class="gt-contact-list">
+                                        <li>
+                                            <div class="icon">
+                                                <img src="assets/img/call.png" alt="img">
+                                                <span>Phone</span>
+                                            </div>
+                                            <a href="tel:8816927222">8816927222</a>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <img src="assets/img/location.png" alt="img">
+                                                <span>Location</span>
+                                            </div>
+                                            Karnal, Haryana, India
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul class="gt-list-area">
+                                    <li>
+                                        <a href="#">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Quality Assurance
+                                        </a>
+                                    </li>
+                                   
+                                   
+                                    <li>
+                                        <a href="#">
+                                          Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 ps-lg-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Our Services</h3>
+                                </div>
+                                <ul class="gt-list-area">
+                                    <li>
+                                        <a href="#">
+                                           Pcd Franchise
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Contract Manufacturing
+                                        </a>
+                                    </li>
+                                    
+                                   
+                                    <li>
+                                        <a href="#">
+                                           Download
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="gt-footer-widget-items">
+                                <div class="gt-widget-head">
+                                    <h3>Our Contact</h3>
+                                </div>
+                                <ul class="gt-contact-content">
+                                    <li>
+                                        <span><i class="fa-solid fa-location-dot"></i></span>
+                                         163G, SEC 3, Hsiidc, Karnal, India
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-phone"></i></span>
+                                        <a href="tel:8816927222">8816927222</a>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-envelope"></i></span>
+                                        <a href="mailto:info@pharmakonlifesciences.com">info@pharmakonlifesciences.com</a>
+                                    </li>
+                                </ul>
+                                <div class="footer-socials">
+                                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-wrapper">
+                        <p>&copy; 2026&nbsp;<b>Pharmakon</b>. All Rights Reserved.</p>
+                        <div class="gt-social-icon d-flex align-items-center wow fadeInUp" data-wow-delay=".5s">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </div>
+		
+		
+		
+		<link rel="stylesheet" href="1.css">
+<a href="https://api.whatsapp.com/send?phone=919812027027&text=I am interested your pharmakon products" class="float" target="_blank">
+ <span ><img src="assets/img/whatsapp.png" width="65" height="65" alt=""/></span>
+</a>
+	 <link rel="stylesheet" href="2.css">
+<a  href="tel:8816927222" class="new-float" >
+ <span ><img src="assets/img/download.png" width="70" height="70" alt=""/></span>
+</a>
+
+		
+		<!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="../../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Splitting Js >>-->
+        <script src="assets/js/splitting.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/splitting-animation.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/template-settings.js"></script>
+        <!--<< Template Setting.js >>-->
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
+
+
