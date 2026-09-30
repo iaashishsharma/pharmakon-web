@@ -30,4 +30,4 @@
 :HL["/assets/img/call.png","image"]
 :HL["/assets/img/location.png","image"]
 :HL["/assets/img/home-1/dot.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"K4UHYLDPmhngKf7dTXyju"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"P3ycs_2TefNay70CpLndj"}
