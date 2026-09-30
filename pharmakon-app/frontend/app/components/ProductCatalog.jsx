@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import { resolveProductImage } from "../data/imageResolver";
 
-function ProductCatalogContent({
+export default function ProductCatalog({
   initialProducts = [],
   careArea = "general",
   categoryOptions = [
@@ -18,7 +17,6 @@ function ProductCatalogContent({
   ],
   baseImgPath = "/assets/img/products/broad/",
 }) {
-  const searchParams = useSearchParams();
   const [products, setProducts] = useState(initialProducts);
   const [filter, setFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,10 +26,11 @@ function ProductCatalogContent({
 
   const pageSize = 24;
 
-  // Sync URL query params with search/filter state
+  // Sync URL query params with search/filter state safely without triggering Suspense fallback
   useEffect(() => {
-    if (searchParams) {
-      const queryParam = searchParams.get("search") || searchParams.get("type") || searchParams.get("category") || "";
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const queryParam = params.get("search") || params.get("type") || params.get("category") || "";
       if (queryParam) {
         setSearchTerm(queryParam);
         const lowerParam = queryParam.toLowerCase().trim();
@@ -43,7 +42,7 @@ function ProductCatalogContent({
         }
       }
     }
-  }, [searchParams]);
+  }, []);
 
   useEffect(() => {
     // Try fetching dynamic products from backend API with short timeout
@@ -394,11 +393,5 @@ function ProductCatalogContent({
   );
 }
 
-export default function ProductCatalog(props) {
-  return (
-    <Suspense fallback={<div className="text-center py-5">Loading products...</div>}>
-      <ProductCatalogContent {...props} />
-    </Suspense>
-  );
-}
+
 
