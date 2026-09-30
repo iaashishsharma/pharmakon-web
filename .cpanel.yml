@@ -2,9 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home3/pharmakonlife/public_html
-    - /bin/rm -rf $DEPLOYPATH/* $DEPLOYPATH/.* 2>/dev/null || true
+    - /bin/rm -rf $DEPLOYPATH/* 2>/dev/null || true
     - /bin/cp -R pharmakon-app/frontend/out/* $DEPLOYPATH
     - /bin/chmod -R 755 $DEPLOYPATH
-    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} +
+
 
 
