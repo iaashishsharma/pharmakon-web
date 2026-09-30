@@ -1,3 +1,11 @@
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
 RewriteEngine On
 
 # Force HTTPS
@@ -16,4 +24,5 @@ RewriteRule ^(.*)$ /$1/index.html [L]
 # Clean URL handling: check if file.html exists
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ /$1.html [L]
+
 

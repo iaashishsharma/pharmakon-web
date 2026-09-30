@@ -49,4 +49,4 @@
 :HL["/assets/img/home-1/shop/list-03.jpg","image"]
 :HL["/assets/img/home-1/shop/list-04.jpg","image"]
 :HL["/assets/img/home-1/shop/list-05.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"shop","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"kp6OCcz0pys2cUYtOaJ2A"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"shop","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"zyac8K3Snvsz96ekg4ITG"}
