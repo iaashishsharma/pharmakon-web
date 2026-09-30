@@ -59,4 +59,4 @@
 :HL["/assets/img/home-2/service/03.jpg","image"]
 :HL["/assets/img/home-2/service/04.jpg","image"]
 :HL["/assets/img/home-2/service/05.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"index-2","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"6NIT6cDFYykw5dEnccvjD"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"index-2","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"K4UHYLDPmhngKf7dTXyju"}

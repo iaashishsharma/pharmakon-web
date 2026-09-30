@@ -46,16 +46,21 @@ function ProductCatalogContent({
   }, [searchParams]);
 
   useEffect(() => {
-    // Try fetching dynamic products from backend API
+    // Try fetching dynamic products from backend API with short timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1000);
+
     const apiBase =
       typeof window !== "undefined" && window.PHARMAKON_API_URL
         ? window.PHARMAKON_API_URL
-        : "http://localhost:5000";
+        : "/api";
 
-    fetch(`${apiBase}/api/products?category=${encodeURIComponent(careArea)}`, {
+    fetch(`${apiBase}/products?category=${encodeURIComponent(careArea)}`, {
       cache: "no-store",
+      signal: controller.signal,
     })
       .then((res) => {
+        clearTimeout(timeoutId);
         if (!res.ok) throw new Error("API failed");
         return res.json();
       })
@@ -75,8 +80,14 @@ function ProductCatalogContent({
         }
       })
       .catch(() => {
+        clearTimeout(timeoutId);
         // Fallback to initial static array
       });
+
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
   }, [careArea]);
 
   // Robust multi-field filtering logic

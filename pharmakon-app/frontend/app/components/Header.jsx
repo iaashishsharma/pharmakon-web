@@ -31,19 +31,19 @@ export default function Header() {
               <div className="mobile-menu fix mb-3">
                 <ul className="mean-nav">
                   <li><Link href="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
-                  <li><Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link></li>
-                  <li><Link href="/vision-mission" onClick={() => setMobileOpen(false)}>Vision & Mission</Link></li>
-                  <li><Link href="/broad" onClick={() => setMobileOpen(false)}>Broad Range</Link></li>
-                  <li><Link href="/dental-care" onClick={() => setMobileOpen(false)}>Dental Care</Link></li>
-                  <li><Link href="/derma" onClick={() => setMobileOpen(false)}>Dermatology Care</Link></li>
-                  <li><Link href="/gynaecology" onClick={() => setMobileOpen(false)}>Gynaecology Care</Link></li>
-                  <li><Link href="/neuro" onClick={() => setMobileOpen(false)}>Neuropathy Care</Link></li>
-                  <li><Link href="/oncology" onClick={() => setMobileOpen(false)}>Oncology Care</Link></li>
-                  <li><Link href="/ortho" onClick={() => setMobileOpen(false)}>Orthopedic Care</Link></li>
-                  <li><Link href="/paedtric" onClick={() => setMobileOpen(false)}>Pediatric Care</Link></li>
-                  <li><Link href="/contractmanufacturing" onClick={() => setMobileOpen(false)}>Contract Manufacturing</Link></li>
-                  <li><Link href="/pcd-franchise" onClick={() => setMobileOpen(false)}>PCD Franchise</Link></li>
-                  <li><Link href="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link></li>
+                  <li><Link href="/about/" onClick={() => setMobileOpen(false)}>About Us</Link></li>
+                  <li><Link href="/vision-mission/" onClick={() => setMobileOpen(false)}>Vision & Mission</Link></li>
+                  <li><Link href="/broad/" onClick={() => setMobileOpen(false)}>Broad Range</Link></li>
+                  <li><Link href="/dental-care/" onClick={() => setMobileOpen(false)}>Dental Care</Link></li>
+                  <li><Link href="/derma/" onClick={() => setMobileOpen(false)}>Dermatology Care</Link></li>
+                  <li><Link href="/gynaecology/" onClick={() => setMobileOpen(false)}>Gynaecology Care</Link></li>
+                  <li><Link href="/neuro/" onClick={() => setMobileOpen(false)}>Neuropathy Care</Link></li>
+                  <li><Link href="/oncology/" onClick={() => setMobileOpen(false)}>Oncology Care</Link></li>
+                  <li><Link href="/ortho/" onClick={() => setMobileOpen(false)}>Orthopedic Care</Link></li>
+                  <li><Link href="/paedtric/" onClick={() => setMobileOpen(false)}>Pediatric Care</Link></li>
+                  <li><Link href="/contractmanufacturing/" onClick={() => setMobileOpen(false)}>Contract Manufacturing</Link></li>
+                  <li><Link href="/pcd-franchise/" onClick={() => setMobileOpen(false)}>PCD Franchise</Link></li>
+                  <li><Link href="/contact/" onClick={() => setMobileOpen(false)}>Contact Us</Link></li>
                 </ul>
               </div>
               <div className="offcanvas__contact">
@@ -62,7 +62,7 @@ export default function Header() {
                     <div className="offcanvas__contact-text"><a href="tel:+919802002727">+91 9802 002 727</a></div>
                   </li>
                 </ul>
-                <Link href="/contact" className="gt-theme-btn" onClick={() => setMobileOpen(false)}>
+                <Link href="/contact/" className="gt-theme-btn" onClick={() => setMobileOpen(false)}>
                   <span className="gt-text-btn"><span className="gt-text-2">Contact Us <i className="fa-solid fa-arrow-right"></i></span></span>
                 </Link>
               </div>
@@ -105,8 +105,7 @@ export default function Header() {
                 <div className="logo" style={{ position: "relative", zIndex: 10000 }}>
                   <Link href="/" style={{ display: "block" }}>
                     <div className="logo-container-fade" style={{ display: "block" }}>
-                      <img src="/assets/img/logo/logo.png" alt="Logo 1" className="logo-fade img1" />
-                      <img src="/assets/img/logo/logo2.png" alt="Logo 2" className="logo-fade img2" />
+                      <img src="/pharmakon-logo.png" alt="Pharmakon Life Sciences" style={{ maxHeight: "55px", width: "auto" }} />
                     </div>
                   </Link>
                 </div>
@@ -115,7 +114,7 @@ export default function Header() {
                     <nav id="mobile-menu">
                       <ul>
                         <li className="has-dropdown active menu-thumb">
-                          <Link href="/about">About Us</Link>
+                          <Link href="/about/">About Us</Link>
                           <ul className="submenu has-homemenu">
                             <li>
                               <div className="homemenu-items">
@@ -123,7 +122,7 @@ export default function Header() {
                                   <div className="homemenu-thumb">
                                     <img src="/assets/img/header/home-1.jpg" alt="img" />
                                     <div className="demo-button">
-                                      <Link href="/about" className="gt-theme-btn">
+                                      <Link href="/about/" className="gt-theme-btn">
                                         <span className="gt-text-btn">
                                           <span className="gt-text-2">Overview<i className="fa-solid fa-arrow-right"></i></span>
                                         </span>
@@ -138,7 +137,7 @@ export default function Header() {
                                   <div className="homemenu-thumb mb-15">
                                     <img src="/assets/img/header/home-2.jpg" alt="img" />
                                     <div className="demo-button">
-                                      <Link href="/vision-mission" className="gt-theme-btn">
+                                      <Link href="/vision-mission/" className="gt-theme-btn">
                                         <span className="gt-text-btn">
                                           <span className="gt-text-2">Vision & Mission <i className="fa-solid fa-arrow-right"></i></span>
                                         </span>
@@ -153,7 +152,7 @@ export default function Header() {
                                   <div className="homemenu-thumb mb-15">
                                     <img src="/assets/img/header/home-3.jpg" alt="img" />
                                     <div className="demo-button">
-                                      <Link href="/contractmanufacturing" className="gt-theme-btn">
+                                      <Link href="/contractmanufacturing/" className="gt-theme-btn">
                                         <span className="gt-text-btn">
                                           <span className="gt-text-2">Manufacturing Strength <i className="fa-solid fa-arrow-right"></i></span>
                                         </span>
@@ -168,7 +167,7 @@ export default function Header() {
                                   <div className="homemenu-thumb mb-15">
                                     <img src="/assets/img/header/home-4.jpg" alt="img" />
                                     <div className="demo-button">
-                                      <Link href="/contact" className="gt-theme-btn">
+                                      <Link href="/contact/" className="gt-theme-btn">
                                         <span className="gt-text-btn">
                                           <span className="gt-text-2">Contact Us <i className="fa-solid fa-arrow-right"></i></span>
                                         </span>
@@ -184,49 +183,49 @@ export default function Header() {
                           </ul>
                         </li>
                         <li className="has-dropdown active d-xl-none">
-                          <Link href="/about" className="border-none">About Us</Link>
+                          <Link href="/about/" className="border-none">About Us</Link>
                           <ul className="submenu">
-                            <li><Link href="/about">Overview</Link></li>
-                            <li><Link href="/vision-mission">Vision & Mission</Link></li>
-                            <li><Link href="/contact">Contact Us</Link></li>
+                            <li><Link href="/about/">Overview</Link></li>
+                            <li><Link href="/vision-mission/">Vision & Mission</Link></li>
+                            <li><Link href="/contact/">Contact Us</Link></li>
                           </ul>
                         </li>
                         <li className="has-dropdown">
-                          <a href="#">Our Products</a>
+                          <Link href="/broad/">Our Products</Link>
                           <ul className="submenu">
-                            <li><Link href="/broad">Pharmakon Lifesciences</Link></li>
-                            <li><Link href="/neuro">Neuropathy Care</Link></li>
-                            <li><Link href="/dental-care">Dental Care</Link></li>
-                            <li><Link href="/derma">Dermatology Care</Link></li>
-                            <li><Link href="/gynaecology">Gynaecology Care</Link></li>
-                            <li><Link href="/paedtric">Pediatric Care</Link></li>
-                            <li><Link href="/ortho">Orthopedic Care</Link></li>
-                            <li><Link href="/oncology">Oncology Care</Link></li>
+                            <li><Link href="/broad/">Pharmakon Lifesciences</Link></li>
+                            <li><Link href="/neuro/">Neuropathy Care</Link></li>
+                            <li><Link href="/dental-care/">Dental Care</Link></li>
+                            <li><Link href="/derma/">Dermatology Care</Link></li>
+                            <li><Link href="/gynaecology/">Gynaecology Care</Link></li>
+                            <li><Link href="/paedtric/">Pediatric Care</Link></li>
+                            <li><Link href="/ortho/">Orthopedic Care</Link></li>
+                            <li><Link href="/oncology/">Oncology Care</Link></li>
                           </ul>
                         </li>
                         <li className="has-dropdown">
-                          <Link href="/contractmanufacturing">Third Party MANUFACTURING</Link>
+                          <Link href="/contractmanufacturing/">Third Party MANUFACTURING</Link>
                           <ul className="submenu">
-                            <li><Link href="/contractmanufacturing">Contract Manufacturing</Link></li>
+                            <li><Link href="/contractmanufacturing/">Contract Manufacturing</Link></li>
                             <li className="has-dropdown">
-                              <Link href="/broad">
+                              <Link href="/broad/">
                                 Third Party Products List <i className="fas fa-angle-right ms-1"></i>
                               </Link>
                               <ul className="submenu">
-                                <li><Link href="/broad?search=tablet">Tablets</Link></li>
-                                <li><Link href="/broad?search=capsule">Capsules</Link></li>
-                                <li><Link href="/broad?search=injection">Injections</Link></li>
-                                <li><Link href="/broad?search=syrup">Syrups / Dry Syrups</Link></li>
-                                <li><Link href="/broad?search=herbal">Herbals</Link></li>
+                                <li><Link href="/broad/?search=tablet">Tablets</Link></li>
+                                <li><Link href="/broad/?search=capsule">Capsules</Link></li>
+                                <li><Link href="/broad/?search=injection">Injections</Link></li>
+                                <li><Link href="/broad/?search=syrup">Syrups / Dry Syrups</Link></li>
+                                <li><Link href="/broad/?search=herbal">Herbals</Link></li>
                               </ul>
                             </li>
                           </ul>
                         </li>
                         <li className="has-dropdown">
-                          <Link href="/pcd-franchise">Pcd Franchise</Link>
+                          <Link href="/pcd-franchise/">Pcd Franchise</Link>
                         </li>
                         <li className="has-dropdown">
-                          <Link href="/contact">Contact Us</Link>
+                          <Link href="/contact/">Contact Us</Link>
                         </li>
                       </ul>
                     </nav>
@@ -243,7 +242,7 @@ export default function Header() {
                     <h6>+91-88169-27222</h6>
                   </div>
                 </div>
-                <Link href="/broad" className="gt-theme-btn">
+                <Link href="/broad/" className="gt-theme-btn">
                   <div className="border-glow-wrapper">
                     <button className="border-glow-btn">New Launch</button>
                   </div>

@@ -37,4 +37,4 @@
 :HL["/assets/img/logo/logo1.png","image"]
 :HL["/assets/img/whatsapp.png","image"]
 :HL["/assets/img/download.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"vision-mission","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"6NIT6cDFYykw5dEnccvjD"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"vision-mission","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"K4UHYLDPmhngKf7dTXyju"}
