@@ -5,6 +5,18 @@ import { useState } from "react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedSubmenu, setExpandedSubmenu] = useState({});
+
+  const toggleSubmenu = (key) => {
+    setExpandedSubmenu((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+  };
 
   return (
     <>
@@ -28,22 +40,70 @@ export default function Header() {
               <p className="text d-none d-xl-block">
                 At PHARMAKON LIFESCIENCES, we are committed to delivering high-quality pharmaceutical products through advanced manufacturing, trusted third-party solutions and reliable PCD pharma services.
               </p>
-              <div className="mobile-menu fix mb-3">
-                <ul className="mean-nav">
-                  <li><Link href="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
-                  <li><Link href="/about/" onClick={() => setMobileOpen(false)}>About Us</Link></li>
-                  <li><Link href="/vision-mission/" onClick={() => setMobileOpen(false)}>Vision & Mission</Link></li>
-                  <li><Link href="/broad/" onClick={() => setMobileOpen(false)}>Broad Range</Link></li>
-                  <li><Link href="/dental-care/" onClick={() => setMobileOpen(false)}>Dental Care</Link></li>
-                  <li><Link href="/derma/" onClick={() => setMobileOpen(false)}>Dermatology Care</Link></li>
-                  <li><Link href="/gynaecology/" onClick={() => setMobileOpen(false)}>Gynaecology Care</Link></li>
-                  <li><Link href="/neuro/" onClick={() => setMobileOpen(false)}>Neuropathy Care</Link></li>
-                  <li><Link href="/oncology/" onClick={() => setMobileOpen(false)}>Oncology Care</Link></li>
-                  <li><Link href="/ortho/" onClick={() => setMobileOpen(false)}>Orthopedic Care</Link></li>
-                  <li><Link href="/paedtric/" onClick={() => setMobileOpen(false)}>Pediatric Care</Link></li>
-                  <li><Link href="/contractmanufacturing/" onClick={() => setMobileOpen(false)}>Contract Manufacturing</Link></li>
-                  <li><Link href="/pcd-franchise/" onClick={() => setMobileOpen(false)}>PCD Franchise</Link></li>
-                  <li><Link href="/contact/" onClick={() => setMobileOpen(false)}>Contact Us</Link></li>
+              <div className="mobile-menu fix mb-4">
+                <ul className="mean-nav" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <Link href="/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>Home</Link>
+                  </li>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <Link href="/about/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>About Us</Link>
+                      <button type="button" onClick={() => toggleSubmenu("about")} aria-label="Toggle About Us submenu" style={{ background: "#f5f5f5", border: "none", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                        <i className={`fas ${expandedSubmenu["about"] ? "fa-minus" : "fa-plus"}`} style={{ fontSize: "12px" }}></i>
+                      </button>
+                    </div>
+                    {expandedSubmenu["about"] && (
+                      <ul style={{ listStyle: "none", paddingLeft: "15px", marginTop: "10px" }}>
+                        <li style={{ padding: "6px 0" }}><Link href="/about/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Overview</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/vision-mission/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Vision & Mission</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/contact/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Contact Us</Link></li>
+                      </ul>
+                    )}
+                  </li>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <Link href="/broad/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>Our Products</Link>
+                      <button type="button" onClick={() => toggleSubmenu("products")} aria-label="Toggle Our Products submenu" style={{ background: "#f5f5f5", border: "none", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                        <i className={`fas ${expandedSubmenu["products"] ? "fa-minus" : "fa-plus"}`} style={{ fontSize: "12px" }}></i>
+                      </button>
+                    </div>
+                    {expandedSubmenu["products"] && (
+                      <ul style={{ listStyle: "none", paddingLeft: "15px", marginTop: "10px" }}>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Pharmakon Lifesciences (All)</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/neuro/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Neuropathy Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/dental-care/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Dental Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/derma/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Dermatology Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/gynaecology/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Gynaecology Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/paedtric/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Pediatric Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/ortho/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Orthopedic Care</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/oncology/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Oncology Care</Link></li>
+                      </ul>
+                    )}
+                  </li>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <Link href="/contractmanufacturing/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>Third Party Manufacturing</Link>
+                      <button type="button" onClick={() => toggleSubmenu("manufacturing")} aria-label="Toggle Manufacturing submenu" style={{ background: "#f5f5f5", border: "none", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                        <i className={`fas ${expandedSubmenu["manufacturing"] ? "fa-minus" : "fa-plus"}`} style={{ fontSize: "12px" }}></i>
+                      </button>
+                    </div>
+                    {expandedSubmenu["manufacturing"] && (
+                      <ul style={{ listStyle: "none", paddingLeft: "15px", marginTop: "10px" }}>
+                        <li style={{ padding: "6px 0" }}><Link href="/contractmanufacturing/" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Contract Manufacturing Overview</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/?search=tablet" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Tablets</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/?search=capsule" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Capsules</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/?search=injection" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Injections</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/?search=syrup" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Syrups / Dry Syrups</Link></li>
+                        <li style={{ padding: "6px 0" }}><Link href="/broad/?search=herbal" onClick={closeMobileMenu} style={{ color: "#555", textDecoration: "none" }}>Herbals</Link></li>
+                      </ul>
+                    )}
+                  </li>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <Link href="/pcd-franchise/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>PCD Franchise</Link>
+                  </li>
+                  <li style={{ borderBottom: "1px solid #eee", padding: "10px 0" }}>
+                    <Link href="/contact/" onClick={closeMobileMenu} style={{ fontWeight: 600, color: "#111", textDecoration: "none" }}>Contact Us</Link>
+                  </li>
                 </ul>
               </div>
               <div className="offcanvas__contact">

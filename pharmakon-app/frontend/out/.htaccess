@@ -6,11 +6,27 @@
     Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
+# Ensure correct MIME types for _next static assets
+<IfModule mod_mime.c>
+    AddType application/javascript .js .mjs
+    AddType text/css .css
+    AddType image/svg+xml .svg
+    AddType application/json .json
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+</IfModule>
+
+# Disable directory listings
+Options -Indexes
+
 RewriteEngine On
 
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Allow all _next static files to be served directly (CRITICAL for React/Next.js)
+RewriteRule ^_next/(.*)$ _next/$1 [L]
 
 # Serve existing static files and directories directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -24,5 +40,3 @@ RewriteRule ^(.*)$ /$1/index.html [L]
 # Clean URL handling: check if file.html exists
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ /$1.html [L]
-
-

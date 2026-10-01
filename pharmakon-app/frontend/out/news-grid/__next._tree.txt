@@ -39,4 +39,4 @@
 :HL["/assets/img/home-1/news/news-07.jpg","image"]
 :HL["/assets/img/home-1/news/news-08.jpg","image"]
 :HL["/assets/img/home-1/news/news-09.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"news-grid","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"zyac8K3Snvsz96ekg4ITG"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"news-grid","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"5GNXUMhRtQQnPlg5oNYQ5"}
